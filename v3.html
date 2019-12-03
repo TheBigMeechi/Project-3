@@ -1,0 +1,31 @@
+<html>
+     <title> v1 </title>
+<head>
+<script>
+function fibonacci (number) {
+     //if input number equals 1 or 2 return 1
+if (number == 1 || number == 2) {return 1;} 
+else {return fibonacci(number - 1) + fibonacci(number - 2);}
+     //else return sum of fibonacci of previous two numbers
+     }
+function compute_and_display () {
+     // read input value
+var userInput = document.getElementById("inputValue").value;
+     //result = fibonacci(input)
+var result = fibonacci(userInput);
+     //print result on display
+document.getElementById("output_goes_here").innerHTML = result;
+     }
+</script>
+</head>
+<body>
+<!-- USER INPUTS VALUE -->
+<form class="inputForm" action="index.html" method="post">
+  <h3>Enter a number here:</h3>
+  <input id="inputValue" type="text">
+ </form>
+<!--BUTTON "compute_and_display()" -->
+<button type="button" class="button" onclick="compute_and_display()">fibonacci</button>
+<p id="output_value"></p>
+</body>
+</html>
